@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Shafkat";
+    src: url(../assets/fonts/Li\ Shohid\ Shafkat\ Samir\ Unicode.ttf);
+}
+
+@font-face {
+    font-family: "Sora";
+    src: url(../assets/fonts/Sora-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "PoppinsBold";
+    src: url(../assets/fonts/Poppins-Bold.ttf);
+}

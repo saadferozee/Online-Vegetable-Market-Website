@@ -7,38 +7,417 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Nature's Platter</title>
+    <link rel="shortcut icon" href="assets/images/Group.png" type="image/x-icon">
+
+    <!-- Dear Vaiya, I have to use my local font, becouse my internet connection is weak, first I use google font, then I figgured out how to use local font in webpage, then I came with my local font. I think its a cool idea than google font 😌.... -->
+
+    <!-- Tailwind CSS cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="Styles/style.css">
 
 </head>
 
-<body>
-    
-    <!-- <h1>hello world</h1> -->
+<body class="font-['Sora'] font-light">
 
     <!-- Navigation Bar starts here -->
-     <nav>
+    <nav class="sticky top-0 w-[100%] py-3 bg-white border-green-50 border-[0.5px] shadow-lg">
+    
+        <div class="w-[87.5%] mx-auto flex place-content-between text-[16px]">
 
-        <div>
-
-            <div id="nav-icon">
-
-                <img src="assets/logo-green.png" alt="Nature's Platter logo">
-
+            
+            <div id="nav-icon" class="w-[25%]">
+            
+            <img class="h-[45px] hidden sm:block" src="assets/images/logo-green.png" alt="Nature's Platter logo">
+            <img class="h-[45px] block sm:hidden" src="assets/images/Group.png" alt="Nature's Platter (leaf) logo">
+            
             </div>
-
-            <div id="nav-menu">
-
+            
+            <div id="nav-menu" class="w-[25%] hidden sm:flex items-center place-content-evenly">
                 
-
+                <a href="">Product</a>
+                <a href="">Service</a>
+                <a href="">Contact us</a>
+                
             </div>
+                            
+            <div id="nav-login" class="w-[25%] hidden sm:flex justify-end items-center">
+                
+                <i class="fa-solid fa-magnifying-glass m-2 cursor-pointer"></i>
+                <i class="fa-solid fa-cart-shopping m-2 cursor-pointer"></i>
+                
+                <button class="m-2 w-auto p-1 px-5 border rounded-[5px] border-green-700 hover:bg-green-700 hover:text-white cursor-pointer">Login</button>
+                
+                <button class="m-2 w-auto p-1 px-4 border border-green-700 rounded-[5px] text-white bg-green-700 hover:bg-white hover:text-black cursor-pointer">Register</button>
+                
+            </div>               
 
-            <div id="nav-login">
+            <div id="nav-login-smallscreen" class="sm:hidden grid  place-items-center">
+
+                <i class="fa-solid fa-bars text-black font-bold text-[20px]"></i>
 
             </div>
 
         </div>
 
-     </nav>
-     <!-- Navigation Bar ends here  -->
+    </nav>
+    <!-- Navigation Bar ends here  -->
+
+    <!-- Banner Box stars here  -->
+    <div id="banner-section" class="bg-gradient-to-b from-[#ffffff] to-[#efebe3]">
+
+        <div class="w-[87.5%] mx-auto mb-[50px] pt-[70px] sm:pt-[100px] place-items-center">
+            
+            <h1 class="font-['Shafkat'] text-7xl text-center font-bold">Freshness <span class="text-[#179800]">You Can Count On</span>, Prices You'll Love!</h1>
+            
+            <p class="font-medium text-xl text-center my-[25px]">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we've got you covered every day!</p>
+            
+            <img class="w-[90%] sm:w-[65%]" src="assets/images/hero-img.png" alt="picture of a bag full with vagetables.">
+            
+        </div>
+        
+    </div>
+    <!-- Banner Box ends here  -->
+
+    <!-- Service Section stars here  -->
+    <div id="service-card-box" class="w-[87.5%] my-[60px] mx-auto bg-white">
+
+        <h1 class="font-semibold text-[25px] sm:text-[40px] mb-[15px]">Service</h1>
+
+        <div id="service-cards" class="grid grid-cols-1 sm:grid-cols-3 gap-[2%]">
+
+            <div id="secvice-card-1" class="p-[20px] bg-[#efebe3] rounded-2xl place-items-center">
+
+                <img class="w-[115px] sm:w-[150px] h-[115px] sm:h-[150px]" src="assets/images/support.png" alt="24/7 support tag">
+                <h3 class="my-[20px] font-semibold text-[24px]">24/7 Services</h3>
+                <p class="font-medium text-xl text-center my-[25px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, numquam adipisci. Voluptas eveniet deleniti ad.</p>
+
+            </div>
+
+            <div id="secvice-card-2" class="p-[20px] bg-[#efebe3] rounded-2xl place-items-center">
+
+                <img class="w-[115px] sm:w-[150px] h-[115px] sm:h-[150px]" src="assets/images/fast-delivery.png" alt="fast delivery tag">
+                <h3 class="my-[20px] font-semibold text-[24px]">24/7 Services</h3>
+                <p class="font-medium text-xl text-center my-[25px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, numquam adipisci. Voluptas eveniet deleniti ad.</p>
+
+            </div>
+
+            <div id="secvice-card-3" class="p-[20px] bg-[#efebe3] rounded-2xl place-items-center">
+
+                <img class="w-[115px] sm:w-[150px] h-[115px] sm:h-[150px]" src="assets/images/healthy-100.png" alt="healthy product tag">
+                <h3 class="my-[20px] font-semibold text-[24px]">24/7 Services</h3>
+                <p class="font-medium text-xl text-center my-[25px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, numquam adipisci. Voluptas eveniet deleniti ad.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Service Section ends here  -->
+
+    <!-- Populer Product Cards starts here | Starting time = 11:45 AM 06/06/2025 -->
+    <div id="service-sectoin" class="bg-[#efebe3] py-[60px]">
+
+        <div class="w-[87.5%] mx-auto">
+
+            <h1 class="font-semibold text-[25px] sm:text-[40px] mb-[30px]">Populer Products</h1>
+
+            <div id="populer-product-cards" class="grid grid-cols-1 sm:grid-cols-4 gap-[30px]">
+
+                <!-- Product Card Model -->
+
+                <div id="product-card-1" class="flex bg-white rounded-[10px]">
+
+                    <div class="m-[15px] bg-[#efebe3] rounded-[8px]">
+
+                        <img src="assets/images/product-tomato.png" alt="Picture of Tomato.">
+                        
+                    </div>
+
+                    <div class="mx-[10px] my-[15px]">
+
+                        <i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star  text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star-half-stroke text-[#efbf04]"></i><span class="font-semibold"> 4.5</span>
+                        
+                        <h3 class="font-semibold text-[20px] my-[5px]">Onion 2KG</h3>
+                        <h4 class="font-bold text-[15px]"><i class="fa-solid fa-bangladeshi-taka-sign"></i> 65.00</h4>
+                        
+                    </div>
+
+                </div>
+
+                <div id="product-card-2" class="flex bg-white rounded-[10px]">
+
+                    <div class="m-[15px] bg-[#efebe3] rounded-[8px]">
+
+                        <img src="assets/images/product-tomato.png" alt="Picture of Tomato.">
+                        
+                    </div>
+
+                    <div class="mx-[10px] my-[15px]">
+
+                        <i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star  text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star-half-stroke text-[#efbf04]"></i><span class="font-semibold"> 4.5</span>
+                        
+                        <h3 class="font-semibold text-[20px] my-[5px]">Onion 2KG</h3>
+                        <h4 class="font-bold text-[15px]"><i class="fa-solid fa-bangladeshi-taka-sign"></i> 65.00</h4>
+                        
+                    </div>
+
+                </div>
+
+                <div id="product-card-3" class="flex bg-white rounded-[10px]">
+
+                    <div class="m-[15px] bg-[#efebe3] rounded-[8px]">
+
+                        <img src="assets/images/product-tomato.png" alt="Picture of Tomato.">
+                        
+                    </div>
+
+                    <div class="mx-[10px] my-[15px]">
+
+                        <i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star  text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star-half-stroke text-[#efbf04]"></i><span class="font-semibold"> 4.5</span>
+                        
+                        <h3 class="font-semibold text-[20px] my-[5px]">Onion 2KG</h3>
+                        <h4 class="font-bold text-[15px]"><i class="fa-solid fa-bangladeshi-taka-sign"></i> 65.00</h4>
+                        
+                    </div>
+
+                </div>
+
+                <div id="product-card-4" class="flex bg-white rounded-[10px]">
+
+                    <div class="m-[15px] bg-[#efebe3] rounded-[8px]">
+
+                        <img src="assets/images/product-tomato.png" alt="Picture of Tomato.">
+                        
+                    </div>
+
+                    <div class="mx-[10px] my-[15px]">
+
+                        <i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star  text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star-half-stroke text-[#efbf04]"></i><span class="font-semibold"> 4.5</span>
+                        
+                        <h3 class="font-semibold text-[20px] my-[5px]">Onion 2KG</h3>
+                        <h4 class="font-bold text-[15px]"><i class="fa-solid fa-bangladeshi-taka-sign"></i> 65.00</h4>
+                        
+                    </div>
+
+                </div>
+
+                <div id="product-card-5" class="flex bg-white rounded-[10px]">
+
+                    <div class="m-[15px] bg-[#efebe3] rounded-[8px]">
+
+                        <img src="assets/images/product-tomato.png" alt="Picture of Tomato.">
+                        
+                    </div>
+
+                    <div class="mx-[10px] my-[15px]">
+
+                        <i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star  text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star-half-stroke text-[#efbf04]"></i><span class="font-semibold"> 4.5</span>
+                        
+                        <h3 class="font-semibold text-[20px] my-[5px]">Onion 2KG</h3>
+                        <h4 class="font-bold text-[15px]"><i class="fa-solid fa-bangladeshi-taka-sign"></i> 65.00</h4>
+                        
+                    </div>
+
+                </div>
+
+                <div id="product-card-6" class="flex bg-white rounded-[10px]">
+
+                    <div class="m-[15px] bg-[#efebe3] rounded-[8px]">
+
+                        <img src="assets/images/product-tomato.png" alt="Picture of Tomato.">
+                        
+                    </div>
+
+                    <div class="mx-[10px] my-[15px]">
+
+                        <i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star  text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star-half-stroke text-[#efbf04]"></i><span class="font-semibold"> 4.5</span>
+                        
+                        <h3 class="font-semibold text-[20px] my-[5px]">Onion 2KG</h3>
+                        <h4 class="font-bold text-[15px]"><i class="fa-solid fa-bangladeshi-taka-sign"></i> 65.00</h4>
+                        
+                    </div>
+
+                </div>
+
+                <div id="product-card-7" class="flex bg-white rounded-[10px]">
+
+                    <div class="m-[15px] bg-[#efebe3] rounded-[8px]">
+
+                        <img src="assets/images/product-tomato.png" alt="Picture of Tomato.">
+                        
+                    </div>
+
+                    <div class="mx-[10px] my-[15px]">
+
+                        <i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star  text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star-half-stroke text-[#efbf04]"></i><span class="font-semibold"> 4.5</span>
+                        
+                        <h3 class="font-semibold text-[20px] my-[5px]">Onion 2KG</h3>
+                        <h4 class="font-bold text-[15px]"><i class="fa-solid fa-bangladeshi-taka-sign"></i> 65.00</h4>
+                        
+                    </div>
+
+                </div>
+
+                <div id="product-card-8" class="flex bg-white rounded-[10px]">
+
+                    <div class="m-[15px] bg-[#efebe3] rounded-[8px]">
+
+                        <img src="assets/images/product-tomato.png" alt="Picture of Tomato.">
+                        
+                    </div>
+
+                    <div class="mx-[10px] my-[15px]">
+
+                        <i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star  text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star-half-stroke text-[#efbf04]"></i><span class="font-semibold"> 4.5</span>
+                        
+                        <h3 class="font-semibold text-[20px] my-[5px]">Onion 2KG</h3>
+                        <h4 class="font-bold text-[15px]"><i class="fa-solid fa-bangladeshi-taka-sign"></i> 65.00</h4>
+                        
+                    </div>
+
+                </div>
+
+                <div id="product-card-9" class="flex bg-white rounded-[10px]">
+
+                    <div class="m-[15px] bg-[#efebe3] rounded-[8px]">
+
+                        <img src="assets/images/product-tomato.png" alt="Picture of Tomato.">
+                        
+                    </div>
+
+                    <div class="mx-[10px] my-[15px]">
+
+                        <i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star  text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star-half-stroke text-[#efbf04]"></i><span class="font-semibold"> 4.5</span>
+                        
+                        <h3 class="font-semibold text-[20px] my-[5px]">Onion 2KG</h3>
+                        <h4 class="font-bold text-[15px]"><i class="fa-solid fa-bangladeshi-taka-sign"></i> 65.00</h4>
+                        
+                    </div>
+
+                </div>
+                <div id="product-card-10" class="flex bg-white rounded-[10px]">
+
+                    <div class="m-[15px] bg-[#efebe3] rounded-[8px]">
+
+                        <img src="assets/images/product-tomato.png" alt="Picture of Tomato.">
+                        
+                    </div>
+
+                    <div class="mx-[10px] my-[15px]">
+
+                        <i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star  text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star-half-stroke text-[#efbf04]"></i><span class="font-semibold"> 4.5</span>
+                        
+                        <h3 class="font-semibold text-[20px] my-[5px]">Onion 2KG</h3>
+                        <h4 class="font-bold text-[15px]"><i class="fa-solid fa-bangladeshi-taka-sign"></i> 65.00</h4>
+                        
+                    </div>
+
+                </div>
+                <div id="product-card-11" class="flex bg-white rounded-[10px]">
+
+                    <div class="m-[15px] bg-[#efebe3] rounded-[8px]">
+
+                        <img src="assets/images/product-tomato.png" alt="Picture of Tomato.">
+                        
+                    </div>
+
+                    <div class="mx-[10px] my-[15px]">
+
+                        <i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star  text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star-half-stroke text-[#efbf04]"></i><span class="font-semibold"> 4.5</span>
+                        
+                        <h3 class="font-semibold text-[20px] my-[5px]">Onion 2KG</h3>
+                        <h4 class="font-bold text-[15px]"><i class="fa-solid fa-bangladeshi-taka-sign"></i> 65.00</h4>
+                        
+                    </div>
+
+                </div>
+                <div id="product-card-12" class="flex bg-white rounded-[10px]">
+
+                    <div class="m-[15px] bg-[#efebe3] rounded-[8px]">
+
+                        <img src="assets/images/product-tomato.png" alt="Picture of Tomato.">
+                        
+                    </div>
+
+                    <div class="mx-[10px] my-[15px]">
+
+                        <i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star  text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star text-[#efbf04]"></i><i class="fa-solid fa-star-half-stroke text-[#efbf04]"></i><span class="font-semibold"> 4.5</span>
+                        
+                        <h3 class="font-semibold text-[20px] my-[5px]">Onion 2KG</h3>
+                        <h4 class="font-bold text-[15px]"><i class="fa-solid fa-bangladeshi-taka-sign"></i> 65.00</h4>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Populer Product Cards ends here | Completing time = 12:51 PM 06/06/25 -->
+
+    <!-- New Arrival and Offer Section starts here | Starting time = 02:05 PM 06/06/25 -->
+     <div id="arrival-offer-section py-[60px]" class="hidden">
+
+        <div class="w-[87.5%] mx-auto my-[100px] border py-[20px]">
+            
+            <h1 class="font-semibold text-[25px] sm:text-[40px] mb-[30px]">New Arrival and Offers</h1>
+
+            <div id="offer-cards" class="flex gap-[15px]">
+
+                <div id="offer-card-1" class="bg-[#115414] rounded-[20px] px-[20px] max-w-[800px] flex">
+
+                    <div class="my-auto w-[60%]">
+
+                        <img class="m-[30px]" src="assets/images/dawat-logo.png" alt="logo of dawaat brand">
+                        
+                        <h3 class="bg-[#63b76d] rounded-[14px] m-[30px] py-[15px] px-[30px] font-['Poppins'] text-white text-[25px]">Cook Exotic Dishes</h3>
+
+                        <h4 class="text-white font-['Poppins'] text-[40px] m-[30px]">Up to <span class="font-['PoppinsBold']">20% OFF</span></h4>
+
+                    </div>
+
+                    <div class=" relative flex justify-center items-end ">
+
+                        <img src="assets/images/product-dawat.png" alt="picture of dawaat biriyani rice packet">
+
+                    </div>
+
+                </div>
+
+                <div id="offer-card-2" class="bg-[#102861] rounded-[20px] px-[20px] max-w-[800px] flex place-content-between">
+
+                    <div class="my-auto w-[60%]">
+
+                        <img class="m-[30px]" src="assets/images/indiagate-logo.png" alt="logo of dawaat brand">
+                        
+                        <h3 class="bg-[#63b76d] rounded-[14px] m-[30px] py-[15px] px-[30px] font-['Poppins'] text-white text-[25px]">Cook Exotic Dishes</h3>
+
+                        <h4 class="text-white font-['Poppins'] text-[40px] m-[30px]">Up to <span class="font-['PoppinsBold']">20% OFF</span></h4>
+
+                    </div>
+
+                    <div class=" relative flex justify-center items-end">
+
+                        <img src="assets/images/product-indiagate.png" alt="picture of dawaat biriyani rice packet">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+     </div>
+    <!-- New Arrival and Offer Section ends here | Completing time =  -->
 
 </body>
 
